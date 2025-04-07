@@ -23,13 +23,13 @@ while getopts ":l:spghc" option; do
 				echo "-l option needs a login to open"
 				exit 1
 			fi
-				python3 -m webbrowser "$PROFILE.$INTRA_URL/users/$OPTARG/" ;;
-		s) python3 -m webbrowser "$PROFILE.$INTRA_URL/slots/" ;;
-		p) python3 -m webbrowser "$PROJECTS.$INTRA_URL/" ;;
-		g) python3 -m webbrowser "$PROJECTS.$INTRA_URL/projects/graph/" ;;
+				python3 -m webbrowser "$PROFILE.$INTRA_URL/users/$OPTARG" ;;
+		s) python3 -m webbrowser "$PROFILE.$INTRA_URL/slots" ;;
+		p) python3 -m webbrowser "$PROJECTS.$INTRA_URL" ;;
+		g) python3 -m webbrowser "$PROJECTS.$INTRA_URL/projects/graph" ;;
 		h) echo "$HELP_MESSAGE" ;;
 		c) python3 -m webbrowser "$META.$INTRA_URL/clusters";;
-		*) python3 -m webbrowser "$PROFILE.$INTRA_URL/" ;;
+		*) python3 -m webbrowser "$PROFILE.$INTRA_URL" ;;
 	esac
 done
 
